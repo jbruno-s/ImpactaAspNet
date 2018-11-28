@@ -1,5 +1,5 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Oficina.Repositorios.SistemaArquivos;
+using Oficina.Repositorios;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -33,12 +33,13 @@ namespace Oficina.Repositorios.SistemaArquivos.Tests
 
             if (marcaId > 0)
             {
-                Assert.AreEqual(marca.Nome, "VW");
+                Assert.AreEqual(marca.Nome, "Vw");
             }
             else
             {
                 Assert.IsNull(marca);
             }
+
         }
     }
 }
