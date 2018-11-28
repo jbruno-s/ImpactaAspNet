@@ -39,7 +39,6 @@ namespace Oficina.Repositorios.SistemaArquivos.Tests
             {
                 Assert.IsNull(marca);
             }
-
         }
     }
 }

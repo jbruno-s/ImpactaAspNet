@@ -40,7 +40,7 @@ namespace Oficina.Repositorios
             {
                 var propriedades = linha.Split('|');
 
-                if (Convert.ToInt32(propriedades) == id)
+                if (Convert.ToInt32(propriedades[0]) == id)
                 {
                     marca = new Marca();
 
