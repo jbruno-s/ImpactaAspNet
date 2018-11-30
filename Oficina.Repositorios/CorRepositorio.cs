@@ -5,12 +5,14 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static System.Configuration.ConfigurationManager;
 
 namespace Oficina.Repositorios
 {
     public class CorRepositorio
-    {
-        const string caminhoArquivo = @"Dados\Cor.txt";
+    {   //ToDo Add novo metodo na classe Path.
+        private string caminhoArquivo = Path.Combine(AppDomain.CurrentDomain.BaseDirectory,
+                AppSettings["caminhoArquivoCor"]);//@"Dados\Cor.txt";
 
         public List<Cor> Selecionar()
         {
