@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<modelos>
+  <modelo>
+    <id>1</id>
+    <nome>Fox</nome>
+    <marcaId>1</marcaId>
+  </modelo>
+  <modelo>
+    <id>2</id>
+    <nome>Astra</nome>
+    <marcaId>2</marcaId>
+  </modelo>
+  <modelo>
+    <id>3</id>
+    <nome>HB 20</nome>
+    <marcaId>4</marcaId>
+  </modelo>
+  <modelo>
+    <id>4</id>
+    <nome>C300</nome>
+    <marcaId>7</marcaId>
+  </modelo>
+  <modelo>
+    <id>5</id>
+    <nome>Cruize</nome>
+    <marcaId>2</marcaId>
+  </modelo>  
+  <modelo>
+    <id>6</id>
+    <nome>Uno</nome>
+    <marcaId>6</marcaId>
+  </modelo>  
+</modelos>
