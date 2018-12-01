@@ -40,4 +40,44 @@
     <Combustivel>Alcool</Combustivel>
     <Cambio>Automatico</Cambio>
   </Veiculo>
+  <Veiculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <Id>a086ef48-962c-47f1-b439-fda7ea069524</Id>
+    <Placa>ABC-123</Placa>
+    <Ano>2018</Ano>
+    <Observacao>TESTE</Observacao>
+    <Modelo>
+      <Id>2</Id>
+      <Nome>Astra</Nome>
+      <Marca>
+        <Id>2</Id>
+        <Nome>Chevrolet</Nome>
+      </Marca>
+    </Modelo>
+    <Cor>
+      <Id>2</Id>
+      <Nome>Azul</Nome>
+    </Cor>
+    <Combustivel>Gasolina</Combustivel>
+    <Cambio>Automatico</Cambio>
+  </Veiculo>
+  <Veiculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <Id>b0e51852-492f-48de-8a9c-10aafebe42e6</Id>
+    <Placa>abc-124</Placa>
+    <Ano>2019</Ano>
+    <Observacao>hb 20</Observacao>
+    <Modelo>
+      <Id>3</Id>
+      <Nome>HB 20</Nome>
+      <Marca>
+        <Id>4</Id>
+        <Nome>Hyundai</Nome>
+      </Marca>
+    </Modelo>
+    <Cor>
+      <Id>1</Id>
+      <Nome>Preto</Nome>
+    </Cor>
+    <Combustivel>Flex</Combustivel>
+    <Cambio>Automatico</Cambio>
+  </Veiculo>
 </veiculos>

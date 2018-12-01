@@ -9,13 +9,42 @@
 @* comentário do Razor *@
 <!--comentario padrão do html-->
 <head>
+    <link href="https://fonts.googleapis.com/css?family=Merriweather|PT+Sans|Sedgwick+Ave" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Caveat|Merriweather|PT+Sans|Sedgwick+Ave" rel="stylesheet">
     <meta name="viewport" content="width=device-width" />
     <title>Cadastro de Veículo</title>
+    <style>
+        body {
+            font-size: 16px;
+            font-family: 'Merriweather', serif;
+        }
+
+        label {
+            min-width: 100px;
+            display: inline-block;
+            font-family: 'Merriweather', serif;
+        }
+
+        input, select, button {
+            min-width: 200px;
+            min-height: 24px;
+            margin-bottom: 5px;
+        }
+
+            input[type=submit] {
+                width: 300px;
+            }
+    </style>
 </head>
 <body>
+    @if (IsPost)
+    {
+        veiculoAplicacao.Inserir();
+        Response.Redirect("Veiculo");
+    }
     <h1>Cadastro de Veículo</h1>
     <hr />
-    <form action="/" method="post">
+    <form action="" method="post">
         <label for="marca">Marca</label>
         <select name="marca" onchange="obterModelos(this.value)">
             <option value="">Selecione a marca</option>
@@ -79,7 +108,7 @@
         <textarea name="observacao" rows="10" cols="40"></textarea>
         <br />
 
-        <input type="submit" name="Gravar" />
+        <input type="submit" name="Gravar"/>
     </form>
 
     <script type="text/javascript">

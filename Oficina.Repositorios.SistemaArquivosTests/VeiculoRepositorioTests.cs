@@ -15,9 +15,10 @@ namespace Oficina.Repositorios.SistemaArquivos.Tests
         [TestMethod()]
         public void InserirTest()
         {
-            var veiculo = new Veiculo();
+            var veiculo = new VeiculoPasseio();            
             
             veiculo.Placa = "FTW-1836";
+            veiculo.Carroceria = Carroceria.Hatch;
             veiculo.Ano = 2014;
             veiculo.Observacao = "Observação";
             veiculo.Combustivel = Combustivel.Alcool;
