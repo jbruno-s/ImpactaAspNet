@@ -3,7 +3,8 @@ using System.Collections.Generic;
 
 namespace Oficina.Dominio
 {
-    public abstract class Veiculo
+    //ToDo: OO - Classe (entidade) ou abstração. é a única, que viram tabelas por exemplo.
+    public abstract class Veiculo //: Object
     {
         //public Veiculo()
         //{
@@ -11,13 +12,42 @@ namespace Oficina.Dominio
         //} // forma antiga
 
         public Guid Id { get; set; } = Guid.NewGuid();
-        public string Placa { get; set; }
+
+        //private string placa; //field
+
+        //public string Placa
+        //{
+        //    get
+        //    {
+        //        return placa.ToUpper();
+        //    }
+        //    set
+        //    {
+        //        placa = value.ToUpper();
+        //    }
+
+        //}
+
+        private string placa; //propfull tab tab
+
+        //ToDo: OO - Encapsulamento.
+        public string Placa
+        {
+            get { return placa?.ToUpper(); }
+            set { placa = value?.ToUpper(); }
+        }
+
         public int Ano { get; set; }
         public string Observacao { get; set; }
         public Modelo Modelo { get; set; }
         public Cor Cor { get; set; }
         public Combustivel Combustivel { get; set; }
         public Cambio Cambio { get; set; }
+
+        public DateTime Agora
+        {
+            get { return DateTime.Now; }
+        }
 
         public abstract List<string> Validar();
 
@@ -31,6 +61,12 @@ namespace Oficina.Dominio
             }
 
             return erros;
+        }
+
+        public override string ToString()
+        {
+            return string.Format("{0} {1} {2}", Modelo.Marca.Nome, Modelo.Nome, Placa);
+            //return base.ToString();
         }
     }
 }

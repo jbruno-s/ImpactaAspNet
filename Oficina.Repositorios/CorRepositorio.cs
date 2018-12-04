@@ -9,11 +9,19 @@ using static System.Configuration.ConfigurationManager;
 
 namespace Oficina.Repositorios
 {
-    public class CorRepositorio
-    {   //ToDo Add novo metodo na classe Path.
-        private string caminhoArquivo = Path.Combine(AppDomain.CurrentDomain.BaseDirectory,
-                AppSettings["caminhoArquivoCor"]);//@"Dados\Cor.txt";
+    public class CorRepositorio : RepositorioBase
+    {   //ToDo Add novo metodo na classe Path. implementar método de extensão.
+        //private string caminhoArquivo = Path.Combine(AppDomain.CurrentDomain.BaseDirectory,
+        //      AppSettings["caminhoArquivoCor"]);//@"Dados\Cor.txt";
 
+        private string caminhoArquivo;
+
+        public CorRepositorio()
+        {
+            caminhoArquivo = base.obterCaminhoCompleto("caminhoArquivoCor");
+        }
+
+        //Todo: OO - Polimorfismo por sobrecarga.
         public List<Cor> Selecionar()
         {
             var cores = new List<Cor>();
