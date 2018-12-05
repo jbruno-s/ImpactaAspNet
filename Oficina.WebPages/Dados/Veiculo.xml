@@ -122,4 +122,25 @@
     <Cambio>Manual</Cambio>
     <Carroceria>Hatch</Carroceria>
   </VeiculoPasseio>
+  <VeiculoPasseio xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <Id>cea66d76-83c6-42eb-b84c-fc114886f617</Id>
+    <Placa>ABC-123</Placa>
+    <Ano>2018</Ano>
+    <Observacao>teste</Observacao>
+    <Modelo>
+      <Id>1</Id>
+      <Nome>Fox</Nome>
+      <Marca>
+        <Id>1</Id>
+        <Nome>Vw</Nome>
+      </Marca>
+    </Modelo>
+    <Cor>
+      <Id>1</Id>
+      <Nome>Preto</Nome>
+    </Cor>
+    <Combustivel>Gasolina</Combustivel>
+    <Cambio>Manual</Cambio>
+    <Carroceria>Hatch</Carroceria>
+  </VeiculoPasseio>
 </veiculos>
