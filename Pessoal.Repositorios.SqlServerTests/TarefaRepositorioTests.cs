@@ -40,7 +40,25 @@ namespace Pessoal.Repositorios.SqlServer.Tests
             tarefa.Observacoes = "Rápido editado";
             tarefa.Prioridade = Prioridade.Baixa;
 
-            repositorio.Atualizar(tarefa);            
+            repositorio.Atualizar(tarefa);
+        }
+
+        [TestMethod()]
+        public void SelecionarTest()
+        {
+            foreach (var tarefa in repositorio.Selecionar())
+            {
+                Console.WriteLine($"{tarefa.Id} - {tarefa.Nome} - {tarefa.Observacoes}" +
+                    $" - {tarefa.Prioridade} - {tarefa.Concluida}");
+            }
+        }
+
+        [TestMethod]
+        public void ExcluirTeste()
+        {
+            repositorio.Excluir(1);
+
+            Assert.IsNull(repositorio.Selecionar(1));
         }
     }
 }
