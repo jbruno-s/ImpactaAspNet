@@ -7,8 +7,8 @@ namespace Loja.Dominio
     {
         public int Id { get; set; }
         public DateTime Data { get; set; } = DateTime.Now;
-        public Cliente Cliente { get; set; }
+        public virtual Cliente Cliente { get; set; }
 
-        public List<Produto> Produtos { get; set; }
+        public virtual List<Produto> Produtos { get; set; }
     }
 }
