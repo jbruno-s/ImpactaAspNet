@@ -21,7 +21,7 @@ namespace Loja.MVC.Areas.Admin.Models
         [Display(Name ="Categoria")]
         public int? CategoriaId { get; set; }
 
-        public List<SelectListItem> Categorias { get; set; }
+        public List<SelectListItem> Categorias { get; set; } = new List<SelectListItem>(); 
 
         [Required]
         [Display(Name = "Preço")]
@@ -30,6 +30,6 @@ namespace Loja.MVC.Areas.Admin.Models
         [Required]
         public int Estoque { get; set; }
 
-        public bool Ativo { get; set; }
+        public bool Ativo { get; set; } = true;
     }
 }
