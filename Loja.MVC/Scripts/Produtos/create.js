@@ -2,8 +2,14 @@
 
 pesquisarButton.click(obterProdutoPorCategoria);
 
+//$("#closePopover").click(function () {
+//    pesquisarButton.popover("destroy");
+//});
+
+$(document).on("click", "#closePopover", () => pesquisarButton.popover("destroy"));
+
 function obterProdutoPorCategoria() {
-    const categoriaId = $("#CategoriaId");
+    const categoriaId = $("#CategoriaId").val();
 
     $.ajax({
         url: "/Admin/Produtos/Categoria",
@@ -11,7 +17,8 @@ function obterProdutoPorCategoria() {
         data: { categoriaId }
     })
 
-        .then(function (response) { exibirPopover(response); }) //ou .done() // success
+        //.then(function (response) { exibirPopover(response); }) //ou .done() // success
+        .then(response => { exibirPopover(response);})
         .catch(); //ou .fail() // error
 
     //alert("Passou aqui.");
