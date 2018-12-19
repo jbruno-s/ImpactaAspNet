@@ -1,4 +1,5 @@
-﻿using System.Web;
+﻿using Loja.MVC.Filtros;
+using System.Web;
 using System.Web.Mvc;
 
 namespace Loja.MVC
@@ -7,7 +8,8 @@ namespace Loja.MVC
     {
         public static void RegisterGlobalFilters(GlobalFilterCollection filters)
         {
-            filters.Add(new HandleErrorAttribute());
+            //filters.Add(new HandleErrorAttribute());
+            filters.Add(new LogErrorFilter());
         }
     }
 }
