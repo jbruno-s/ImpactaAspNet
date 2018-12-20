@@ -58,11 +58,11 @@ namespace Loja.MVC
             //   appId: "",
             //   appSecret: "");
 
-            //app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
-            //{
-            //    ClientId = "",
-            //    ClientSecret = ""
-            //});
+            app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
+            {
+                ClientId = "1007121889915-pnh576e19fi1nid0da4f3pc260ps27qa.apps.googleusercontent.com",
+                ClientSecret = "mXm2D1_TVcQ-Mg1z3UMitMF8"
+            });
         }
     }
 }
