@@ -13,6 +13,7 @@ using ViagensOnline.Repositoris.SqlServer;
 
 namespace ViagensOnline.Mvc.Controllers
 {
+    [Authorize]
     public class DestinosController : Controller
     {
         private ViagensOnlineDbContext db = new ViagensOnlineDbContext();
@@ -51,6 +52,7 @@ namespace ViagensOnline.Mvc.Controllers
         }
 
         // GET: Destinos/Details/5
+        [Authorize(Roles ="Master")]
         public ActionResult Details(int? id)
         {
             if (id == null)
@@ -87,7 +89,7 @@ namespace ViagensOnline.Mvc.Controllers
             if (ModelState.IsValid)
             {
                 var destino = Mapear(viewModel);
-                
+
                 SalvarFoto(viewModel.ArquivoFoto);
 
                 db.Destinos.Add(destino);
